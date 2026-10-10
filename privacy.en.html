@@ -120,8 +120,8 @@ Last updated: October 9, 2026 &nbsp;·&nbsp; Effective: October 5, 2026</p>
 <ul>
   <li>Name, email address, phone number, or any account information (no sign-up or login).</li>
   <li>Contacts, photos, microphone, camera, or health data.</li>
-  <li>Advertising identifiers (IDFA); the app contains no ads or behavioral-tracking SDKs.</li>
-  <li>Usage analytics or crash reporting (no analytics service is integrated).</li>
+  <li>Usage analytics or crash reporting: the App itself collects none; the advertising
+      SDK (Google AdMob) diagnostic data is described in the "2. Third-Party Services" section.</li>
 </ul>
 
 <h2>2. Third-Party Services</h2>
@@ -142,6 +142,14 @@ on Cloudflare Workers. The proxy <strong>only forwards</strong> requests; it doe
 your location or queries, and its logs contain only non-identifying technical data
 (timestamp, status code).</p>
 
+<p><strong>2.3 Google AdMob (advertising)</strong></p>
+<p>The app uses Google AdMob to display <strong>non-personalized</strong> banner ads. AdMob may
+collect device information (such as device model, OS version, and coarse region) and
+ad-interaction data for ad delivery and invalid-traffic prevention. We do <strong>not</strong>
+use the advertising identifier (IDFA) to track you across apps. See Google's advertising
+policies:
+<a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">https://policies.google.com/technologies/ads</a></p>
+
 <h2>3. Data Sharing and Sale</h2>
 <p>We do <strong>not</strong> sell, rent, or trade your personal data. We disclose information to third
 parties only:</p>
@@ -149,6 +157,9 @@ parties only:</p>
   <li>To deliver a feature you requested, by sending the necessary information to the
       Google Places API described in Section 2.</li>
   <li>When legally required: we comply with valid legal process within the limits of the law.</li>
+  <li>Advertising: as described in section 2, the Google AdMob SDK collects device and
+      ad-interaction data under its own policies. We do not provide your favorites,
+      search history, or draw history to advertisers.</li>
 </ul>
 
 <h2>4. Retention and Deletion</h2>
